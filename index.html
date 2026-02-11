@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand-section">
+                <h1>HORIZON <span>FREE</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="ri-home-fill"></i> Main Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="ri-shopping-cart-2-line"></i> NFT Marketplace
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="ri-bar-chart-2-line"></i> Data Tables
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="ri-layout-grid-line"></i> Kanban
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="ri-user-line"></i> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="ri-lock-line"></i> Sign In
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar">
+                <div class="breadcrumb" style="display: flex; align-items: center;">
+                    <button class="sidebar-toggle"><i class="ri-menu-2-line"></i></button>
+                    <div>
+                        <h5>Pages / Main Dashboard</h5>
+                        <h2>Main Dashboard</h2>
+                    </div>
+                </div>
+                <div class="navbar-actions">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <button class="icon-btn"><i class="ri-notification-3-line"></i></button>
+                    <button class="icon-btn"><i class="ri-moon-line"></i></button>
+                    <button class="icon-btn"><i class="ri-information-line"></i></button>
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100"
+                        alt="Profile" class="profile-img">
+                </div>
+            </nav>
+
+            <!-- Stats Grid -->
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="ri-bar-chart-fill"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h6>Earnings</h6>
+                        <h3>$350.40</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="ri-file-list-3-fill"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h6>Spend this month</h6>
+                        <h3>$642.39</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h6>Sales</h6>
+                        <h3>$574.34</h3>
+                        <p style="color: #05CD99; font-size: 12px; margin-top: 4px;">+23.08%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h6>Your balance</h6>
+                        <h3>$1,000</h3>
+                    </div>
+                </div>
+                <!-- Add more stat cards as needed -->
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <div class="chart-card full">
+                    <div class="chart-header">
+                        <div>
+                            <p style="color: var(--text-secondary); font-size: 14px;">Total Spent</p>
+                            <h3>$37.5K</h3>
+                        </div>
+                        <i class="ri-calendar-line" style="color: var(--text-secondary); font-size: 20px;"></i>
+                    </div>
+                    <canvas id="mainChart" height="250"></canvas>
+                </div>
+                <div class="chart-card medium">
+                    <div class="chart-header">
+                        <h3>Weekly Revenue</h3>
+                        <i class="ri-bar-chart-fill" style="color: var(--primary-main); font-size: 20px;"></i>
+                    </div>
+                    <canvas id="revenueChart" height="250"></canvas>
+                </div>
+            </div>
+
+            <!-- Tables Section -->
+            <div class="tables-grid">
+                <div class="table-card">
+                    <div class="table-header">
+                        <h3>Check Table</h3>
+                        <i class="ri-more-fill"></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>PROGRESS</th>
+                                <th>QUANTITY</th>
+                                <th>DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="status-check"><i class="ri-check-line"></i></span> Horizon UI PRO</td>
+                                <td>17.5%</td>
+                                <td>2.458</td>
+                                <td>24.Jan.2026</td>
+                            </tr>
+                            <tr>
+                                <td><span class="status-check"><i class="ri-check-line"></i></span> Horizon UI Free</td>
+                                <td>10.8%</td>
+                                <td>1.485</td>
+                                <td>21.Jan.2026</td>
+                            </tr>
+                            <tr>
+                                <td><span class="status-check"><i class="ri-check-line"></i></span> Weekly Update</td>
+                                <td>21.3%</td>
+                                <td>1.024</td>
+                                <td>18.Jan.2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-header">
+                        <h3>Complex Table</h3>
+                        <i class="ri-more-fill"></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>STATUS</th>
+                                <th>DATE</th>
+                                <th>PROGRESS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marketplace</td>
+                                <td><span style="color: #05CD99;"><i class="ri-checkbox-circle-fill"></i>
+                                        Approved</span></td>
+                                <td>15.Jan.2026</td>
+                                <td>90%</td>
+                            </tr>
+                            <tr>
+                                <td>Venus DB</td>
+                                <td><span style="color: #EE5D50;"><i class="ri-close-circle-fill"></i> Error</span></td>
+                                <td>12.Jan.2026</td>
+                                <td>30%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
